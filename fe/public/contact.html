@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Astro Oracle</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <nav class="wrap">
+    <a href="index.html" class="logo"><span class="logo-mark">✦</span>Astro Oracle</a>
+    <div class="navlinks">
+      <a href="services.html">Readings</a>
+      <a href="insights.html">Insights</a>
+      <a href="guruji.html">Guruji</a>
+      <a href="reviews.html">Reviews</a>
+      <a href="contact.html" style="color:var(--navy);">Contact</a>
+    </div>
+    <div class="navcta">
+      <span class="fee-badge">$110 / session</span>
+      <button class="btn btn-primary btn-sm" onclick="openChat()">Start Consultation</button>
+    </div>
+  </nav>
+</header>
+
+<section class="page-hero">
+  <div class="wrap">
+    <p class="eyebrow">Contact</p>
+    <h1>Have a question before you book a session?</h1>
+    <p class="lead">Send a note below, or skip straight to a live $110 chat with Guruji using the button in the corner.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap contact-grid">
+    <div class="form-card">
+      <form onsubmit="event.preventDefault(); document.getElementById('formSuccess').style.display='block'; this.reset();">
+        <div class="field-row">
+          <div class="field">
+            <label for="cf-name">Full name</label>
+            <input type="text" id="cf-name" required placeholder="Your name">
+          </div>
+          <div class="field">
+            <label for="cf-email">Email</label>
+            <input type="email" id="cf-email" required placeholder="you@example.com">
+          </div>
+        </div>
+        <div class="field">
+          <label for="cf-topic">What's this about</label>
+          <select id="cf-topic">
+            <option>Numerology reading</option>
+            <option>Vedic astrology reading</option>
+            <option>Booking a session ($110)</option>
+            <option>Something else</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="cf-msg">Message</label>
+          <textarea id="cf-msg" required placeholder="Tell us a bit about what you're looking for…"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:100%;">Send message</button>
+        <div class="form-success" id="formSuccess">Thanks — Guruji typically replies within a few hours. Want an answer sooner? Use the chat button instead.</div>
+      </form>
+    </div>
+    <div class="contact-info">
+      <div class="info-item">
+        <div class="info-icon">@</div>
+        <div><h4>Email</h4><p>hello@astrooracle.example</p></div>
+      </div>
+      <div class="info-item">
+        <div class="info-icon">$</div>
+        <div><h4>Session fee</h4><p>$110 flat rate per live consultation, follow-ups included.</p></div>
+      </div>
+      <div class="info-item">
+        <div class="info-icon">Hi</div>
+        <div><h4>Fastest option</h4><p>Skip the form and chat with Guruji directly.</p></div>
+      </div>
+      <button class="btn btn-gold" onclick="openChat()" style="align-self:flex-start;">Chat with Guruji</button>
+    </div>
+  </div>
+</section>
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a href="index.html" class="logo"><span class="logo-mark">✦</span>Astro Oracle</a>
+        <p style="font-size:13.5px; color:var(--ink-soft); max-width:260px; margin-top:14px;">Numerology and Vedic astrology readings, delivered through a live conversation with your Guruji.</p>
+      </div>
+      <div class="foot-cols">
+        <div class="foot-col">
+          <h4>Readings</h4>
+          <a href="services.html#numerology">Numerology</a>
+          <a href="services.html#astrology">Vedic astrology</a>
+          <a href="services.html#consultation">Live consultation</a>
+        </div>
+        <div class="foot-col">
+          <h4>Explore</h4>
+          <a href="insights.html">Daily insights</a>
+          <a href="guruji.html">Meet the Guruji</a>
+          <a href="reviews.html">Client reviews</a>
+        </div>
+        <div class="foot-col">
+          <h4>Company</h4>
+          <a href="contact.html">Contact</a>
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <div>© 2026 Astro Oracle. Readings are offered for guidance and reflection, not as a substitute for professional advice.</div>
+      <div>Made for curious minds, one number at a time.</div>
+    </div>
+  </div>
+</footer>
+
+<button class="fab" onclick="openChat()">
+  <span class="fab-dot"></span> Chat with Guruji
+</button>
+
+<div class="overlay-bg" id="overlayBg" onclick="closeChat()"></div>
+<div class="chat-panel" id="chatPanel">
+  <div class="panel-head">
+    <div class="phone-avatar" id="panelAvatar">G</div>
+    <div>
+      <div style="font-weight:600; font-size:14.5px;">Guruji</div>
+      <div class="status"><span class="status-dot"></span>Online now · $110 / session</div>
+    </div>
+    <button class="panel-close" onclick="closeChat()" aria-label="Close chat">×</button>
+  </div>
+  <div class="panel-body" id="panelBody">
+    <div class="bubble them">Namaste, I'm here. Tell me your date of birth and what's on your mind, and let's start from there.</div>
+  </div>
+  <div class="typing" id="typingIndicator" style="display:none;">Guruji is typing…</div>
+  <div class="panel-input">
+    <input type="text" id="panelInput" placeholder="Type a message…" onkeydown="if(event.key==='Enter')sendPanelMsg()">
+    <button onclick="sendPanelMsg()" aria-label="Send">→</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Astro Oracle — Numerology & Astrology, Explained by Guruji</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.18.0/firebase-app.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyBSX0G_ydmgAGgLlO15P7bCWSoS9sgEfQI",
+    authDomain: "numericaluniverse-12c99.firebaseapp.com",
+    projectId: "numericaluniverse-12c99",
+    storageBucket: "numericaluniverse-12c99.firebasestorage.app",
+    messagingSenderId: "377661998052",
+    appId: "1:377661998052:web:a8da247476c6a9a769bdf1"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+</script>
+</head>
+<body>
+<header>
+  <nav class="wrap">
+    <a href="index.html" class="logo"><span class="logo-mark">✦</span>Astro Oracle</a>
+    <div class="navlinks">
+      <a href="services.html">Readings</a>
+      <a href="insights.html">Insights</a>
+      <a href="guruji.html">Guruji</a>
+      <a href="reviews.html">Reviews</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="navcta">
+      <span class="fee-badge">$110 / session</span>
+      <button class="btn btn-primary btn-sm" onclick="openChat()">Start Consultation</button>
+    </div>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="eyebrow">Numerology · Vedic Astrology · Live Guidance</p>
+      <h1>Every number in your life is already telling your story.</h1>
+      <p class="lead">Get a personalized numerology and astrology reading, then talk it through live with your Guruji — a real person, not a generated report.</p>
+      <div class="hero-ctas">
+        <button class="btn btn-primary" onclick="openChat()">Chat with Guruji — $110</button>
+        <a href="insights.html" class="btn btn-ghost">See today's insights</a>
+      </div>
+      <div class="hero-proof">
+        <div class="proof-item"><div class="proof-num">15<span class="num">+</span></div><div class="proof-label">Years reading charts</div></div>
+        <div class="proof-item"><div class="proof-num">3K<span class="num">+</span></div><div class="proof-label">Consultations given</div></div>
+        <div class="proof-item"><div class="proof-num">4.9</div><div class="proof-label">Average rating</div></div>
+        <div class="proof-item"><div class="proof-num">$110</div><div class="proof-label">Per session</div></div>
+      </div>
+    </div>
+
+    <div class="orbit-wrap">
+      <svg viewBox="0 0 460 460">
+        <g class="spin-slow"><circle class="orbit-ring" cx="230" cy="230" r="210"/><circle class="orbit-dot gold" cx="230" cy="20" r="5"/></g>
+        <g class="spin-slow-rev"><circle class="orbit-ring" cx="230" cy="230" r="160"/><circle class="orbit-dot navy" cx="230" cy="70" r="4"/></g>
+        <circle class="orbit-ring" cx="230" cy="230" r="110"/>
+      </svg>
+      <div class="calc-card" style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);">
+        <h3>Find your Life Path & Sign</h3>
+        <p class="calc-sub">Enter your birth date — calculated instantly, right here.</p>
+        <div class="calc-fields">
+          <input type="text" inputmode="numeric" maxlength="2" placeholder="DD" id="dd">
+          <input type="text" inputmode="numeric" maxlength="2" placeholder="MM" id="mm">
+          <input type="text" inputmode="numeric" maxlength="4" placeholder="YYYY" id="yy">
+        </div>
+        <button class="btn btn-gold btn-sm" style="width:100%;" onclick="calcLifePath()">Calculate</button>
+        <div class="calc-result" id="calcResult" style="display:none;">
+          <div class="life-badge gold" id="lifeBadgeNum">—</div>
+          <div class="calc-result-text">
+            <div class="k">Life Path</div>
+            <div class="v" id="lifeBadgeText">Your core number</div>
+          </div>
+        </div>
+        <div class="eyebrow" id="calcZodiac" style="display:none; margin-top:10px;"></div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="today-strip">
+  <div class="wrap">
+    <div class="today-badge" id="todayNum">—</div>
+    <div>
+      <div class="t" id="todayDate">Today</div>
+      <div class="d" id="todayNumText">Today's universal number</div>
+    </div>
+    <a href="insights.html">See your zodiac insight →</a>
+  </div>
+</div>
+
+<section id="services">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">What we read</p>
+      <h2>Three ways to understand what your numbers are doing.</h2>
+      <p>Every reading starts with your real birth details — date, time, name — and ends with a person you can actually ask questions to.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-num">01 · Numerology</div>
+        <h3>Life Path & Name Number</h3>
+        <p>What your birth date and name reveal about your natural direction, strengths, and recurring patterns.</p>
+        <ul>
+          <li>Life path & destiny number</li>
+          <li>Name correction suggestions</li>
+          <li>Compatibility between two numbers</li>
+        </ul>
+      </div>
+      <div class="service-card">
+        <div class="service-num">02 · Vedic Astrology</div>
+        <h3>Birth Chart & Dasha</h3>
+        <p>A full Kundli built from your birth time and place, read alongside your current planetary period.</p>
+        <ul>
+          <li>Detailed birth chart (Kundli)</li>
+          <li>Current dasha & transit reading</li>
+          <li>Muhurat for important dates</li>
+        </ul>
+      </div>
+      <div class="service-card">
+        <div class="service-num">03 · Live Consultation</div>
+        <h3>Real-Time Chat with Guruji</h3>
+        <p>Bring your questions straight to your Guruji and get a direct answer, not a static report. $110 per session.</p>
+        <ul>
+          <li>Text chat, on your schedule</li>
+          <li>Follow-up questions included</li>
+          <li>Session notes saved for you</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="guru-section">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Your Guruji</p>
+      <h2>One teacher, every reading — no rotating strangers.</h2>
+      <p>Every consultation on Astro Oracle is with the same Guruji, so context carries from one session to the next.</p>
+    </div>
+    <div class="guruji-profile">
+      <div class="guruji-title">
+        <div class="guruji-avatar-lg">G</div>
+        <h3>Guruji</h3>
+        <div class="status" style="justify-content:center;"><span class="status-dot"></span>Online now</div>
+      </div>
+      <div class="guruji-body">
+        <p>Numerology and Vedic astrology readings grounded in real birth data, not guesswork — explained plainly, in a live conversation, so you leave understanding your own chart rather than just holding a report about it.</p>
+        <div class="guruji-stats">
+          <div>Experience<span class="num">15+ yrs</span></div>
+          <div>Specialty<span class="num">Numerology · Vedic Astrology</span></div>
+          <div>Sessions<span class="num">3,000+</span></div>
+        </div>
+        <div class="guruji-fee">
+          <div class="num">$110</div>
+          <div class="label">per live consultation<br>text chat, follow-ups included</div>
+        </div>
+        <button class="btn btn-gold" onclick="openChat()">Chat with Guruji</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="how">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">How it works</p>
+      <h2>From birth details to a real conversation, in three steps.</h2>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">01</div>
+        <h3>Share your birth details</h3>
+        <p>Your date, time, and place of birth — this is what your reading is actually calculated from.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <h3>Book your session — $110</h3>
+        <p>One flat rate per live consultation, however many follow-up questions you need to ask.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <h3>Chat live and ask anything</h3>
+        <p>No waiting for a PDF. Message your Guruji directly and keep asking until it actually makes sense.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap chat-preview">
+    <div class="chat-copy">
+      <div class="sec-head" style="margin-bottom:26px;">
+        <p class="eyebrow">Live consultation</p>
+        <h2>This is the actual chat you'll be having.</h2>
+      </div>
+      <div class="chat-points">
+        <div class="chat-point"><span class="chat-point-dot"></span><div><strong>No queue anxiety.</strong> See when Guruji is online before you start.</div></div>
+        <div class="chat-point"><span class="chat-point-dot"></span><div><strong>Your numbers, explained live.</strong> Ask "why" as many times as you need to.</div></div>
+        <div class="chat-point"><span class="chat-point-dot"></span><div><strong>One flat fee.</strong> $110 covers the full session, follow-ups included.</div></div>
+      </div>
+      <button class="btn btn-primary" onclick="openChat()">Try the chat</button>
+    </div>
+    <div class="phone">
+      <div class="phone-head">
+        <div class="phone-avatar">G</div>
+        <div>
+          <div style="font-weight:600; font-size:14.5px;">Guruji</div>
+          <div class="status"><span class="status-dot"></span>Online</div>
+        </div>
+      </div>
+      <div class="phone-body">
+        <div class="bubble them">Namaste! I see your life path number is <span class="num">7</span> — that usually means you think a lot before you trust something. Am I close?</div>
+        <div class="bubble me">Honestly, yes. That's a bit unsettling 😅</div>
+        <div class="bubble them">That's the point of the number — not fortune telling, just a starting point. Want me to walk through your name number next?</div>
+        <div class="bubble me">Yes please</div>
+      </div>
+      <div class="phone-input">
+        <input type="text" placeholder="Type your question…" disabled>
+        <button aria-hidden="true">→</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="reviews">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">In their words</p>
+      <h2>What people talk to Guruji about.</h2>
+    </div>
+    <div class="testi-grid">
+      <div class="testi">
+        <div class="testi-mark">"</div>
+        <p>I've read numerology explainers online for years but never actually understood my own chart until we walked through it in real time.</p>
+        <div class="testi-who">Rohit M. — Pune</div>
+      </div>
+      <div class="testi">
+        <div class="testi-mark">"</div>
+        <p>Asked about a name change before starting a business. Got a clear yes/no with reasoning, not a vague paragraph I had to decode myself.</p>
+        <div class="testi-who">Sana K. — Hyderabad</div>
+      </div>
+      <div class="testi">
+        <div class="testi-mark">"</div>
+        <p>$110 felt fair for how long the session actually ran — nobody rushed me off before I'd asked everything I wanted to.</p>
+        <div class="testi-who">Devika R. — Kochi</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0;">
+  <div class="cta-band">
+    <h2>Ready to actually understand your chart?</h2>
+    <p>One flat $110 session, live with your Guruji — no report to wait for, no queue of strangers.</p>
+    <button class="btn btn-primary" onclick="openChat()">Start Consultation</button>
+  </div>
+</section>
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a href="index.html" class="logo"><span class="logo-mark">✦</span>Astro Oracle</a>
+        <p style="font-size:13.5px; color:var(--ink-soft); max-width:260px; margin-top:14px;">Numerology and Vedic astrology readings, delivered through a live conversation with your Guruji.</p>
+      </div>
+      <div class="foot-cols">
+        <div class="foot-col">
+          <h4>Readings</h4>
+          <a href="services.html#numerology">Numerology</a>
+          <a href="services.html#astrology">Vedic astrology</a>
+          <a href="services.html#consultation">Live consultation</a>
+        </div>
+        <div class="foot-col">
+          <h4>Explore</h4>
+          <a href="insights.html">Daily insights</a>
+          <a href="guruji.html">Meet the Guruji</a>
+          <a href="reviews.html">Client reviews</a>
+        </div>
+        <div class="foot-col">
+          <h4>Company</h4>
+          <a href="contact.html">Contact</a>
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <div>© 2026 Astro Oracle. Readings are offered for guidance and reflection, not as a substitute for professional advice.</div>
+      <div>Made for curious minds, one number at a time.</div>
+    </div>
+  </div>
+</footer>
+
+<button class="fab" onclick="openChat()">
+  <span class="fab-dot"></span> Chat with Guruji
+</button>
+
+<div class="overlay-bg" id="overlayBg" onclick="closeChat()"></div>
+<div class="chat-panel" id="chatPanel">
+  <div class="panel-head">
+    <div class="phone-avatar" id="panelAvatar">G</div>
+    <div>
+      <div style="font-weight:600; font-size:14.5px;">Guruji</div>
+      <div class="status"><span class="status-dot"></span>Online now · $110 / session</div>
+    </div>
+    <button class="panel-close" onclick="closeChat()" aria-label="Close chat">×</button>
+  </div>
+  <div class="panel-body" id="panelBody">
+    <div class="bubble them">Namaste, I'm here. Tell me your date of birth and what's on your mind, and let's start from there.</div>
+  </div>
+  <div class="typing" id="typingIndicator" style="display:none;">Guruji is typing…</div>
+  <div class="panel-input">
+    <input type="text" id="panelInput" placeholder="Type a message…" onkeydown="if(event.key==='Enter')sendPanelMsg()">
+    <button onclick="sendPanelMsg()" aria-label="Send">→</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

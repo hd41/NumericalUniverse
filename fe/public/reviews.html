@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reviews — Astro Oracle</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <nav class="wrap">
+    <a href="index.html" class="logo"><span class="logo-mark">✦</span>Astro Oracle</a>
+    <div class="navlinks">
+      <a href="services.html">Readings</a>
+      <a href="insights.html">Insights</a>
+      <a href="guruji.html">Guruji</a>
+      <a href="reviews.html" style="color:var(--navy);">Reviews</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="navcta">
+      <span class="fee-badge">$110 / session</span>
+      <button class="btn btn-primary btn-sm" onclick="openChat()">Start Consultation</button>
+    </div>
+  </nav>
+</header>
+
+<section class="page-hero">
+  <div class="wrap">
+    <p class="eyebrow">Reviews</p>
+    <h1>What clients say after a session with Guruji.</h1>
+    <p class="lead">Real feedback from people who've booked a $110 consultation — numerology, Vedic astrology, and everything in between.</p>
+  </div>
+</section>
+
+<section style="padding-bottom:0;">
+  <div class="wrap">
+    <div class="review-stats">
+      <div class="review-stat"><span class="num">4.9</span><div class="label">Average rating</div></div>
+      <div class="review-stat"><span class="num">3,000+</span><div class="label">Sessions completed</div></div>
+      <div class="review-stat"><span class="num">96%</span><div class="label">Would book again</div></div>
+      <div class="review-stat"><span class="num">8</span><div class="label">Languages spoken</div></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0;">
+  <div class="wrap">
+    <div class="review-filter-row">
+      <div class="filter-chip active">All</div>
+      <div class="filter-chip">Numerology</div>
+      <div class="filter-chip">Vedic Astrology</div>
+      <div class="filter-chip">Live Consultation</div>
+      <div class="filter-chip">Compatibility</div>
+    </div>
+    <div class="review-grid">
+      <div class="review-card">
+        <div class="review-top">
+          <span class="review-tag">Numerology</span>
+        </div>
+        <div class="stars">★★★★★</div>
+        <p>I've read numerology explainers online for years but never actually understood my own chart until we walked through it in real time. Worth every one of the 110 dollars.</p>
+        <div class="review-who">
+          <div>
+            <div class="name">Rohit M.</div>
+            <div class="place">Pune, India</div>
+          </div>
+          <div class="date">Jul 2026</div>
+        </div>
+      </div><div class="review-card">
+        <div class="review-top">
+          <span class="review-tag">Vedic Astrology</span>
+        </div>
+        <div class="stars">★★★★★</div>
+        <p>Asked about a name change before starting a business. Got a clear yes or no with reasoning, not a vague paragraph I had to decode myself.</p>
+        <div class="review-who">
+          <div>
+            <div class="name">Sana K.</div>
+            <div class="place">Hyderabad, India</div>
+          </div>
+          <div class="date">Jul 2026</div>
+        </div>
+      </div><div class="review-card">
+        <div class="review-top">
+          <span class="review-tag">Live Consultation</span>
+        </div>
+        <div class="stars">★★★★☆</div>
+        <p>The session ran long because I kept asking questions, and nobody rushed me off. Only reason it's not five stars is I wish I'd booked earlier in the day.</p>
+        <div class="review-who">
+          <div>
+            <div class="name">Devika R.</div>
+            <div class="place">Kochi, India</div>
+          </div>
+          <div class="date">Jun 2026</div>
+        </div>
+      </div><div class="review-card">
+        <div class="review-top">
+          <span class="review-tag">Compatibility</span>
+        </div>
+        <div class="stars">★★★★★</div>
+        <p>Went in skeptical about compatibility numbers between me and my business partner. Left with a genuinely useful read on where we'd clash and why.</p>
+        <div class="review-who">
+          <div>
+            <div class="name">Aman T.</div>
+            <div class="place">Toronto, Canada</div>
+          </div>
+          <div class="date">Jun 2026</div>
+        </div>
+      </div><div class="review-card">
+        <div class="review-top">
+          <span class="review-tag">Vedic Astrology</span>
+        </div>
+        <div class="stars">★★★★★</div>
+        <p>First time getting a real Kundli reading instead of a generic app horoscope. The dasha explanation actually matched what's been happening in my career.</p>
+        <div class="review-who">
+          <div>
+            <div class="name">Meera S.</div>
+            <div class="place">London, UK</div>
+          </div>
+          <div class="date">May 2026</div>
+        </div>
+      </div><div class="review-card">
+        <div class="review-top">
+          <span class="review-tag">Numerology</span>
+        </div>
+        <div class="stars">★★★★☆</div>
+        <p>Clear, direct, no mysticism for its own sake. Would've liked a bit more detail on the name-correction suggestion but the core reading was spot on.</p>
+        <div class="review-who">
+          <div>
+            <div class="name">Farhan Q.</div>
+            <div class="place">Dubai, UAE</div>
+          </div>
+          <div class="date">May 2026</div>
+        </div>
+      </div><div class="review-card">
+        <div class="review-top">
+          <span class="review-tag">Live Consultation</span>
+        </div>
+        <div class="stars">★★★★★</div>
+        <p>Booked the free ten minutes expecting a sales pitch. Got an actual reading instead, and stayed for the full session.</p>
+        <div class="review-who">
+          <div>
+            <div class="name">Priyanka D.</div>
+            <div class="place">Bengaluru, India</div>
+          </div>
+          <div class="date">Apr 2026</div>
+        </div>
+      </div><div class="review-card">
+        <div class="review-top">
+          <span class="review-tag">Muhurat</span>
+        </div>
+        <div class="stars">★★★★★</div>
+        <p>Needed an auspicious date for a store opening on short notice. Got a clear answer within the session, no back and forth over email.</p>
+        <div class="review-who">
+          <div>
+            <div class="name">Karan V.</div>
+            <div class="place">Ahmedabad, India</div>
+          </div>
+          <div class="date">Apr 2026</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0;">
+  <div class="cta-band">
+    <h2>Ready to see what your own reading turns up?</h2>
+    <p>Your first 10 minutes are free — the $110 covers the full session after that, follow-ups included.</p>
+    <button class="btn btn-primary" onclick="openChat()">Chat with Guruji</button>
+  </div>
+</section>
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a href="index.html" class="logo"><span class="logo-mark">✦</span>Astro Oracle</a>
+        <p style="font-size:13.5px; color:var(--ink-soft); max-width:260px; margin-top:14px;">Numerology and Vedic astrology readings, delivered through a live conversation with your Guruji.</p>
+      </div>
+      <div class="foot-cols">
+        <div class="foot-col">
+          <h4>Readings</h4>
+          <a href="services.html#numerology">Numerology</a>
+          <a href="services.html#astrology">Vedic astrology</a>
+          <a href="services.html#consultation">Live consultation</a>
+        </div>
+        <div class="foot-col">
+          <h4>Explore</h4>
+          <a href="insights.html">Daily insights</a>
+          <a href="guruji.html">Meet the Guruji</a>
+          <a href="reviews.html">Client reviews</a>
+        </div>
+        <div class="foot-col">
+          <h4>Company</h4>
+          <a href="contact.html">Contact</a>
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <div>© 2026 Astro Oracle. Readings are offered for guidance and reflection, not as a substitute for professional advice.</div>
+      <div>Made for curious minds, one number at a time.</div>
+    </div>
+  </div>
+</footer>
+
+<button class="fab" onclick="openChat()">
+  <span class="fab-dot"></span> Chat with Guruji
+</button>
+
+<div class="overlay-bg" id="overlayBg" onclick="closeChat()"></div>
+<div class="chat-panel" id="chatPanel">
+  <div class="panel-head">
+    <div class="phone-avatar" id="panelAvatar">G</div>
+    <div>
+      <div style="font-weight:600; font-size:14.5px;">Guruji</div>
+      <div class="status"><span class="status-dot"></span>Online now · $110 / session</div>
+    </div>
+    <button class="panel-close" onclick="closeChat()" aria-label="Close chat">×</button>
+  </div>
+  <div class="panel-body" id="panelBody">
+    <div class="bubble them">Namaste, I'm here. Tell me your date of birth and what's on your mind, and let's start from there.</div>
+  </div>
+  <div class="typing" id="typingIndicator" style="display:none;">Guruji is typing…</div>
+  <div class="panel-input">
+    <input type="text" id="panelInput" placeholder="Type a message…" onkeydown="if(event.key==='Enter')sendPanelMsg()">
+    <button onclick="sendPanelMsg()" aria-label="Send">→</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

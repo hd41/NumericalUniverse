@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Readings — Astro Oracle</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <nav class="wrap">
+    <a href="index.html" class="logo"><span class="logo-mark">✦</span>Astro Oracle</a>
+    <div class="navlinks">
+      <a href="services.html" style="color:var(--navy);">Readings</a>
+      <a href="insights.html">Insights</a>
+      <a href="guruji.html">Guruji</a>
+      <a href="reviews.html">Reviews</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="navcta">
+      <span class="fee-badge">$110 / session</span>
+      <button class="btn btn-primary btn-sm" onclick="openChat()">Start Consultation</button>
+    </div>
+  </nav>
+</header>
+
+<section class="page-hero">
+  <div class="wrap">
+    <p class="eyebrow">Readings</p>
+    <h1>Three ways in — each one ends with a real conversation.</h1>
+    <p class="lead">Pick the reading that matches your question. Every one of them is built from your real birth details and can be taken straight into a live $110 chat with Guruji.</p>
+  </div>
+</section>
+
+<section id="numerology">
+  <div class="wrap service-detail">
+    <div>
+      <div class="service-num">01 · Numerology</div>
+      <h2>Life Path & Name Number</h2>
+      <p class="desc">Your birth date and your name both reduce to numbers — and those numbers tend to show up as real patterns in how you make decisions, work, and relate to people.</p>
+      <button class="btn btn-primary btn-sm" onclick="openChat()">Ask about numerology</button>
+    </div>
+    <div class="detail-list">
+      <div class="detail-item"><span class="num">01</span><div class="t">Life Path Number</div><div class="d">Calculated from your full date of birth.</div></div>
+      <div class="detail-item"><span class="num">02</span><div class="t">Destiny / Name Number</div><div class="d">Calculated from the letters in your full name.</div></div>
+      <div class="detail-item"><span class="num">03</span><div class="t">Name correction</div><div class="d">Suggested spelling adjustments to balance your number.</div></div>
+      <div class="detail-item"><span class="num">04</span><div class="t">Compatibility check</div><div class="d">How your number sits alongside a partner's or co-founder's.</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="astrology" style="background:var(--surface); border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
+  <div class="wrap service-detail" style="border-bottom:none;">
+    <div>
+      <div class="service-num">02 · Vedic Astrology</div>
+      <h2>Birth Chart & Dasha</h2>
+      <p class="desc">A full Kundli, built from your exact birth time and place, read together with the planetary period (dasha) you're currently in — not a generic sun-sign summary.</p>
+      <button class="btn btn-primary btn-sm" onclick="openChat()">Ask about your chart</button>
+    </div>
+    <div class="detail-list">
+      <div class="detail-item"><span class="num">01</span><div class="t">Birth chart (Kundli)</div><div class="d">Full planetary placements at your time of birth.</div></div>
+      <div class="detail-item"><span class="num">02</span><div class="t">Current dasha</div><div class="d">The planetary period you're living through right now.</div></div>
+      <div class="detail-item"><span class="num">03</span><div class="t">Transit reading</div><div class="d">How current planetary movement is affecting your chart.</div></div>
+      <div class="detail-item"><span class="num">04</span><div class="t">Muhurat</div><div class="d">Auspicious timing for weddings, launches, or big decisions.</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="consultation">
+  <div class="wrap service-detail">
+    <div>
+      <div class="service-num">03 · Live Consultation</div>
+      <h2>Real-Time Chat with Guruji — $110</h2>
+      <p class="desc">Every reading above can be walked through live. Bring your questions, get a direct answer, and keep asking "why" until it actually makes sense — one flat fee, session notes saved to your account afterward.</p>
+      <button class="btn btn-primary btn-sm" onclick="openChat()">Start a session</button>
+    </div>
+    <div class="detail-list">
+      <div class="detail-item"><span class="num">01</span><div class="t">Text chat</div><div class="d">On your schedule, no phone call required.</div></div>
+      <div class="detail-item"><span class="num">02</span><div class="t">Follow-up included</div><div class="d">Keep asking questions within the same session.</div></div>
+      <div class="detail-item"><span class="num">03</span><div class="t">Session notes saved</div><div class="d">Read back through past consultations anytime.</div></div>
+      <div class="detail-item"><span class="num">04</span><div class="t">Flat $110 rate</div><div class="d">One price, no per-minute surprises.</div></div>
+    </div>
+  </div>
+</section>
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a href="index.html" class="logo"><span class="logo-mark">✦</span>Astro Oracle</a>
+        <p style="font-size:13.5px; color:var(--ink-soft); max-width:260px; margin-top:14px;">Numerology and Vedic astrology readings, delivered through a live conversation with your Guruji.</p>
+      </div>
+      <div class="foot-cols">
+        <div class="foot-col">
+          <h4>Readings</h4>
+          <a href="services.html#numerology">Numerology</a>
+          <a href="services.html#astrology">Vedic astrology</a>
+          <a href="services.html#consultation">Live consultation</a>
+        </div>
+        <div class="foot-col">
+          <h4>Explore</h4>
+          <a href="insights.html">Daily insights</a>
+          <a href="guruji.html">Meet the Guruji</a>
+          <a href="reviews.html">Client reviews</a>
+        </div>
+        <div class="foot-col">
+          <h4>Company</h4>
+          <a href="contact.html">Contact</a>
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <div>© 2026 Astro Oracle. Readings are offered for guidance and reflection, not as a substitute for professional advice.</div>
+      <div>Made for curious minds, one number at a time.</div>
+    </div>
+  </div>
+</footer>
+
+<button class="fab" onclick="openChat()">
+  <span class="fab-dot"></span> Chat with Guruji
+</button>
+
+<div class="overlay-bg" id="overlayBg" onclick="closeChat()"></div>
+<div class="chat-panel" id="chatPanel">
+  <div class="panel-head">
+    <div class="phone-avatar" id="panelAvatar">G</div>
+    <div>
+      <div style="font-weight:600; font-size:14.5px;">Guruji</div>
+      <div class="status"><span class="status-dot"></span>Online now · $110 / session</div>
+    </div>
+    <button class="panel-close" onclick="closeChat()" aria-label="Close chat">×</button>
+  </div>
+  <div class="panel-body" id="panelBody">
+    <div class="bubble them">Namaste, I'm here. Tell me your date of birth and what's on your mind, and let's start from there.</div>
+  </div>
+  <div class="typing" id="typingIndicator" style="display:none;">Guruji is typing…</div>
+  <div class="panel-input">
+    <input type="text" id="panelInput" placeholder="Type a message…" onkeydown="if(event.key==='Enter')sendPanelMsg()">
+    <button onclick="sendPanelMsg()" aria-label="Send">→</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
