@@ -186,8 +186,14 @@ document.addEventListener('DOMContentLoaded', renderZodiacGrid);
 
 /* ---------- CHAT PANEL (single Guruji) ---------- */
 function openChat(){
-  document.getElementById('chatPanel').classList.add('open');
-  document.getElementById('overlayBg').classList.add('open');
+
+  const message = '';
+  const phoneNumber = '9013571042';
+  const whatsappUrl = "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(message); window.open(whatsappUrl, "_blank");
+
+  // --- disabled opening chat option ------
+  // document.getElementById('chatPanel').classList.add('open');
+  // document.getElementById('overlayBg').classList.add('open');
 }
 function closeChat(){
   document.getElementById('chatPanel').classList.remove('open');
